@@ -7,12 +7,14 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+  <a href="/new">New Message</a>
     <p>
       <% message.map(item => {  %> 
-        <h1>text: <%= item.text  %> </h1>
-        <h2>Posted by: <%= item.user %> </h2>
-        <h3>Added on: <%= item.added %>  /h3>
-
+        <div class = "message-wrapper">
+          <h1 class = "message-content"><%= item.text  %> </h1>
+          <h2>Posted by: <%= item.user %> </h2>
+          <h3>Added on: <%= item.added %>  </h3>
+        </div>
         <% }) %> 
 
     </p>
